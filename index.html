@@ -9,7 +9,7 @@
        quand vous le partagez sur WhatsApp, TikTok, Instagram)
        ════════════════════════════════════════════════════════════════ -->
   <title>Votre Nom — Logiciels SaaS sur mesure en Côte d'Ivoire</title>
-  <meta name="description" content="Je conçois des logiciels SaaS sur mesure pour les entreprises, coopératives et entrepreneurs en Côte d'Ivoire : gestion, paiements Mobile Money, mode hors-ligne. Sourcing Chine et marketing digital en complément.">
+  <meta name="description" content="Logiciels SaaS sur mesure pour entreprises et coopératives en Côte d'Ivoire : gestion, Mobile Money, hors-ligne. Sourcing Chine et marketing digital.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_CI">
   <meta property="og:title" content="Votre Nom — Logiciels SaaS sur mesure en Côte d'Ivoire">
@@ -27,27 +27,6 @@
   <!-- Évite le flash blanc pendant le chargement + active les animations seulement si JS est dispo -->
   <style>html{background:#09090B}</style>
   <script>document.documentElement.classList.add('js')</script>
-
-  <!-- Tailwind CSS (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'] },
-          colors: {
-            ink: '#09090B',
-            surface: '#121216',
-            raised: '#17171C',
-            line: 'rgba(255,255,255,0.08)',
-            brand: { 400: '#60A5FA', 500: '#3B82F6', 600: '#6366F1' },
-            go: { 400: '#34D399', 500: '#10B981' },
-            gold: '#E3BD76'
-          }
-        }
-      }
-    }
-  </script>
 
   <style>
     :root { --line: rgba(255,255,255,.08); --surface: #121216; }
@@ -131,8 +110,9 @@
     .pay { transition: opacity .5s ease, transform .5s cubic-bezier(.2,.8,.2,1), background-color 1.2s ease; }
     .js .pay.is-new { opacity: 0; transform: translateY(-10px); }
     .pay.flash { background-color: rgba(16,185,129,.10); }
-    .bar { transform-origin: bottom; transition: transform .9s cubic-bezier(.2,.8,.2,1); }
-    .js .demo:not(.live) .bar { transform: scaleY(.08); }
+    /* Le fond noir du visuel disparaît : seules les lumières s'ajoutent à la page */
+    .hero-img { mix-blend-mode: screen; pointer-events: none; }
+    .demo-card { background-color: rgba(18,18,22,.86); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
 
     /* ── Apparition au scroll ───────────────────────────────── */
     .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); transition-delay: var(--d, 0ms); }
@@ -150,19 +130,56 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
       .js .reveal, .js .pay.is-new { opacity: 1; transform: none; }
-      .js .demo:not(.live) .bar { transform: none; }
     }
   </style>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       STYLES TAILWIND — le fichier styles.css est GÉNÉRÉ à partir des
+       classes de cette page (il ne se modifie pas à la main).
+       Après avoir ajouté ou changé des classes Tailwind, régénérez-le
+       depuis ce dossier, sinon les nouvelles classes n'auront aucun effet :
+
+       npx tailwindcss@3.4.17 -c outils/tailwind.config.js -i outils/tailwind.css -o styles.css --minify
+
+       Changer un texte, un numéro ou un lien ne demande aucune régénération.
+       Couleurs et police : outils/tailwind.config.js.
+       Ce lien doit rester APRÈS le bloc <style> ci-dessus.
+       ════════════════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="font-sans">
 
-  <!-- Icônes de marque réutilisées dans la page -->
+  <!-- Icônes intégrées à la page (marques + interface) : aucune bibliothèque externe à charger -->
+  <!-- Pour ajouter une icône : copiez un <symbol id="l-…"> depuis lucide.dev, puis utilisez <svg class="h-5 w-5" aria-hidden="true"><use href="#l-…"/></svg> -->
   <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
     <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
     <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
     <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/></g><circle cx="17.4" cy="6.6" r="1.25" fill="currentColor"/></symbol>
     <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <!-- Icônes d'interface : Lucide v0.460.0, licence ISC (lucide.dev) -->
+    <symbol id="l-arrow-down" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></g></symbol>
+    <symbol id="l-ruler" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></g></symbol>
+    <symbol id="l-smartphone-nfc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="12" x="2" y="6" rx="1"/><path d="M13 8.32a7.43 7.43 0 0 1 0 7.36"/><path d="M16.46 6.21a11.76 11.76 0 0 1 0 11.58"/><path d="M19.91 4.1a15.91 15.91 0 0 1 .01 15.8"/></g></symbol>
+    <symbol id="l-handshake" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></g></symbol>
+    <symbol id="l-layout-dashboard" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></g></symbol>
+    <symbol id="l-wifi-off" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/><path d="M5 12.859a10 10 0 0 1 5.17-2.69"/><path d="M19 12.859a10 10 0 0 0-2.007-1.523"/><path d="M2 8.82a15 15 0 0 1 4.177-2.643"/><path d="M22 8.82a15 15 0 0 0-11.288-3.764"/><path d="m2 2 20 20"/></g></symbol>
+    <symbol id="l-sprout" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></g></symbol>
+    <symbol id="l-smartphone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></g></symbol>
+    <symbol id="l-graduation-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></g></symbol>
+    <symbol id="l-store" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></g></symbol>
+    <symbol id="l-code-xml" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></g></symbol>
+    <symbol id="l-rocket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></g></symbol>
+    <symbol id="l-pointer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></g></symbol>
+    <symbol id="l-shield-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+    <symbol id="l-ship" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/></g></symbol>
+    <symbol id="l-factory" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></g></symbol>
+    <symbol id="l-search-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 11 2 2 4-4"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></g></symbol>
+    <symbol id="l-package-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 2 2 4-4"/><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="m7.5 4.27 9 5.15"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/></g></symbol>
+    <symbol id="l-megaphone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></g></symbol>
+    <symbol id="l-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></g></symbol>
+    <symbol id="l-filter" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></g></symbol>
+    <symbol id="l-sparkles" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></g></symbol>
   </svg>
 
   <!-- ══════════════════════════ 1. HEADER ══════════════════════════ -->
@@ -181,7 +198,7 @@
 
       <div class="flex flex-none items-center gap-3">
         <span class="hidden items-center gap-2.5 rounded-full border border-line bg-white/[.03] py-2 pl-3 pr-3.5 text-[.82rem] font-medium text-zinc-300 md:inline-flex">
-          <span class="pulse"></span>Disponible pour nouveaux projets
+          <span class="pulse"></span>Disponible pour de nouveaux projets
         </span>
         <a class="inline-flex h-11 items-center gap-2 rounded-xl bg-zinc-100 px-4 text-[.92rem] font-bold text-zinc-950 transition hover:bg-white active:scale-[.97]"
            href="https://wa.me/2250700000000" target="_blank" rel="noopener"
@@ -203,7 +220,7 @@
         <div class="min-w-0">
           <!-- Badge visible sur mobile (sur desktop il est dans le header) -->
           <p class="mb-6 inline-flex items-center gap-2.5 rounded-full border border-line bg-white/[.03] py-2 pl-3 pr-3.5 text-[.82rem] font-medium text-zinc-300 md:hidden">
-            <span class="pulse"></span>Disponible pour nouveaux projets
+            <span class="pulse"></span>Disponible pour de nouveaux projets
           </p>
 
           <p class="text-[.98rem] font-semibold text-brand-400 sm:text-[1.05rem]">Architecte de Solutions Digitales &amp; Business</p>
@@ -216,7 +233,7 @@
             J'aide les entreprises, coopératives et entrepreneurs de Côte d'Ivoire à automatiser leur gestion, à sourcer leurs produits en Chine et à accélérer leur croissance digitale.
           </p>
 
-          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a class="btn btn-wa sm:px-7" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
                data-wa="Bonjour, je souhaite lancer un projet SaaS sur mesure. Voici mon activité et mon besoin : ">
               <svg class="h-5 w-5" aria-hidden="true"><use href="#i-wa"/></svg>
@@ -224,61 +241,51 @@
             </a>
             <a class="btn btn-ghost" href="#expertises">
               Découvrir mes expertises
-              <i data-lucide="arrow-down" class="h-[18px] w-[18px] text-zinc-400"></i>
+              <svg class="h-[18px] w-[18px] text-zinc-400" aria-hidden="true"><use href="#l-arrow-down"/></svg>
             </a>
           </div>
 
           <!-- Réassurance -->
           <ul class="mt-10 grid gap-x-6 gap-y-4 border-t border-line pt-7 sm:grid-cols-3">
             <li class="flex items-center gap-3 sm:block">
-              <i data-lucide="ruler" class="h-5 w-5 flex-none text-brand-400 sm:mb-2.5"></i>
+              <svg class="h-5 w-5 flex-none text-brand-400 sm:mb-2.5" aria-hidden="true"><use href="#l-ruler"/></svg>
               <span class="text-[.95rem] font-semibold leading-snug text-zinc-200">Solutions 100&nbsp;% sur mesure</span>
             </li>
             <li class="flex items-center gap-3 sm:block">
-              <i data-lucide="smartphone-nfc" class="h-5 w-5 flex-none text-brand-400 sm:mb-2.5"></i>
+              <svg class="h-5 w-5 flex-none text-brand-400 sm:mb-2.5" aria-hidden="true"><use href="#l-smartphone-nfc"/></svg>
               <span class="text-[.95rem] font-semibold leading-snug text-zinc-200">Intégration Mobile Money native</span>
             </li>
             <li class="flex items-center gap-3 sm:block">
-              <i data-lucide="handshake" class="h-5 w-5 flex-none text-brand-400 sm:mb-2.5"></i>
+              <svg class="h-5 w-5 flex-none text-brand-400 sm:mb-2.5" aria-hidden="true"><use href="#l-handshake"/></svg>
               <span class="text-[.95rem] font-semibold leading-snug text-zinc-200">Accompagnement de A à Z</span>
             </li>
           </ul>
         </div>
 
-        <!-- Démo : un tableau de bord où les paiements Mobile Money arrivent.
-             (Peut être remplacé par un visuel Higgsfield : supprimez ce bloc
-             et mettez <img src="hero.webp" alt="…" class="rounded-3xl"> ) -->
+        <!-- Visuel 3D + démo : les paiements Mobile Money arrivent en direct -->
+
         <div class="demo relative mx-auto w-full min-w-0 max-w-[30rem] lg:max-w-none" data-demo aria-label="Exemple de tableau de bord : encaissements Mobile Money d'une coopérative (données de démonstration)" role="img">
-          <div class="card rounded-[26px] p-4 shadow-[0_40px_90px_-40px_rgba(99,102,241,.55)] sm:p-5">
+          <!-- Visuel 3D du hero (généré avec Higgsfield). Pour le changer : remplacez assets/hero.webp -->
+          <img src="assets/hero.webp" width="960" height="960" alt="" decoding="async" class="hero-img -mt-8 block w-full select-none sm:-mt-10 lg:-mt-6">
+
+          <div class="demo-card card relative z-10 mx-auto -mt-[31%] w-[94%] rounded-[26px] p-4 shadow-[0_40px_90px_-40px_rgba(99,102,241,.55)] sm:p-5 lg:w-[88%]">
 
             <div class="flex items-center justify-between gap-3">
               <div class="flex items-center gap-2.5">
-                <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-600/15 text-brand-400"><i data-lucide="layout-dashboard" class="h-4 w-4"></i></span>
+                <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-600/15 text-brand-400"><svg class="h-4 w-4" aria-hidden="true"><use href="#l-layout-dashboard"/></svg></span>
                 <span class="text-[.9rem] font-semibold text-zinc-200">Tableau de bord</span>
               </div>
               <span class="inline-flex flex-none items-center gap-1.5 text-[.78rem] font-semibold text-go-400"><span class="pulse"></span>En direct</span>
             </div>
 
-            <div class="mt-5 flex items-end justify-between gap-4">
-              <div>
-                <p class="text-[.8rem] font-medium text-zinc-400">Encaissé aujourd'hui</p>
-                <p class="tnum mt-1 text-[1.85rem] font-extrabold leading-none tracking-tight text-white sm:text-[2.1rem]">
-                  <span data-total>1 245 000</span> <span class="text-[.95rem] font-semibold text-zinc-400">FCFA</span>
-                </p>
-              </div>
-              <!-- Mini graphique -->
-              <div class="flex h-14 items-end gap-[5px]" aria-hidden="true">
-                <span class="bar w-2 rounded-sm bg-white/10" style="height:38%"></span>
-                <span class="bar w-2 rounded-sm bg-white/10" style="height:56%;transition-delay:60ms"></span>
-                <span class="bar w-2 rounded-sm bg-white/10" style="height:44%;transition-delay:120ms"></span>
-                <span class="bar w-2 rounded-sm bg-white/10" style="height:70%;transition-delay:180ms"></span>
-                <span class="bar w-2 rounded-sm bg-white/10" style="height:60%;transition-delay:240ms"></span>
-                <span class="bar w-2 rounded-sm bg-brand-500/60" style="height:82%;transition-delay:300ms"></span>
-                <span class="bar w-2 rounded-sm bg-gradient-to-t from-brand-500 to-brand-600" style="height:100%;transition-delay:360ms"></span>
-              </div>
+            <div class="mt-4">
+              <p class="text-[.8rem] font-medium text-zinc-400">Encaissé aujourd'hui</p>
+              <p class="tnum mt-1 text-[1.85rem] font-extrabold leading-none tracking-tight text-white sm:text-[2.1rem]">
+                <span data-total>1 245 000</span> <span class="text-[.95rem] font-semibold text-zinc-400">FCFA</span>
+              </p>
             </div>
 
-            <ul class="mt-5 space-y-1.5" data-feed>
+            <ul class="mt-4 space-y-1" data-feed>
               <li class="pay is-new flex items-center gap-3 rounded-xl px-2.5 py-2.5" data-amount="85000">
                 <span class="h-2.5 w-2.5 flex-none rounded-full" style="background:#1DC8F2"></span>
                 <span class="min-w-0 flex-1">
@@ -307,9 +314,9 @@
 
             <div class="mt-3 flex flex-wrap items-center justify-between gap-x-3 gap-y-2 border-t border-line pt-3.5">
               <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-300/20 bg-amber-300/[.07] px-2.5 py-1 text-[.74rem] font-semibold text-amber-200">
-                <i data-lucide="wifi-off" class="h-3 w-3"></i>3 saisies hors-ligne à synchroniser
+                <svg class="h-3 w-3" aria-hidden="true"><use href="#l-wifi-off"/></svg>3 saisies hors-ligne à synchroniser
               </span>
-              <span class="text-[.74rem] text-zinc-500">Données de démonstration</span>
+              <span class="text-[.74rem] text-zinc-400">Données de démonstration</span>
             </div>
           </div>
         </div>
@@ -326,10 +333,16 @@
 
         <div class="mt-12 grid gap-5 lg:grid-cols-3">
 
-          <!-- Cas 1 -->
-          <article class="card spot reveal flex flex-col p-5 sm:p-7">
+          <!-- Cas 1 — visuel : assets/cas-cooperative.webp -->
+          <article class="card spot reveal flex flex-col overflow-hidden">
+            <div class="relative">
+              <img src="assets/cas-cooperative.webp" width="960" height="537" loading="lazy" decoding="async" class="aspect-[16/9] w-full object-cover sm:aspect-[21/9] lg:aspect-[16/9]"
+                   alt="Smartphone affichant un tableau de bord, posé sur un sac de fèves de cacao">
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-surface to-transparent"></div>
+            </div>
+            <div class="flex flex-1 flex-col p-5 pt-4 sm:p-7 sm:pt-5">
             <div class="flex items-center gap-3">
-              <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><i data-lucide="sprout" class="h-5 w-5"></i></span>
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><svg class="h-5 w-5" aria-hidden="true"><use href="#l-sprout"/></svg></span>
               <span class="text-[.85rem] font-semibold text-zinc-400">Agriculture et coopératives</span>
             </div>
             <h3 class="mt-5 text-[1.3rem] font-bold leading-snug tracking-tight text-white">Plateforme de gestion et de recouvrement pour coopératives</h3>
@@ -344,21 +357,28 @@
               </div>
             </dl>
             <ul class="mb-8 mt-6 space-y-2.5 text-[.93rem] font-medium text-zinc-300">
-              <li class="flex gap-2.5"><i data-lucide="layout-dashboard" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Tableau de bord par campagne</li>
-              <li class="flex gap-2.5"><i data-lucide="wifi-off" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Saisie terrain hors-ligne</li>
-              <li class="flex gap-2.5"><i data-lucide="smartphone" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Remboursements par Mobile Money</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-layout-dashboard"/></svg>Tableau de bord par campagne</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-wifi-off"/></svg>Saisie terrain hors-ligne</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-smartphone"/></svg>Remboursements par Mobile Money</li>
             </ul>
             <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
                data-wa="Bonjour, je souhaite une démo de la plateforme de gestion et de recouvrement pour coopératives agricoles.">
               <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
-              Demander une démo sur WhatsApp
+              Demander une démo<span class="sr-only"> sur WhatsApp</span>
             </a>
+            </div>
           </article>
 
-          <!-- Cas 2 -->
-          <article class="card spot reveal flex flex-col p-5 sm:p-7" style="--d:90ms">
+          <!-- Cas 2 — visuel : assets/cas-ecole.webp -->
+          <article class="card spot reveal flex flex-col overflow-hidden" style="--d:90ms">
+            <div class="relative">
+              <img src="assets/cas-ecole.webp" width="960" height="537" loading="lazy" decoding="async" class="aspect-[16/9] w-full object-cover sm:aspect-[21/9] lg:aspect-[16/9]"
+                   alt="Tablette affichant un tableau de bord scolaire, à côté d'une pile de cahiers">
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-surface to-transparent"></div>
+            </div>
+            <div class="flex flex-1 flex-col p-5 pt-4 sm:p-7 sm:pt-5">
             <div class="flex items-center gap-3">
-              <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><i data-lucide="graduation-cap" class="h-5 w-5"></i></span>
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><svg class="h-5 w-5" aria-hidden="true"><use href="#l-graduation-cap"/></svg></span>
               <span class="text-[.85rem] font-semibold text-zinc-400">Écoles et centres de formation</span>
             </div>
             <h3 class="mt-5 text-[1.3rem] font-bold leading-snug tracking-tight text-white">Gestion scolaire et suivi des paiements de scolarité</h3>
@@ -373,21 +393,28 @@
               </div>
             </dl>
             <ul class="mb-8 mt-6 space-y-2.5 text-[.93rem] font-medium text-zinc-300">
-              <li class="flex gap-2.5"><i data-lucide="layout-dashboard" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Tableau de bord des impayés</li>
-              <li class="flex gap-2.5"><i data-lucide="wifi-off" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Fonctionne sans connexion</li>
-              <li class="flex gap-2.5"><i data-lucide="smartphone" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Wave, Orange Money, MTN, Moov</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-layout-dashboard"/></svg>Tableau de bord des impayés</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-wifi-off"/></svg>Fonctionne sans connexion</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-smartphone"/></svg>Wave, Orange Money, MTN, Moov</li>
             </ul>
             <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
                data-wa="Bonjour, je souhaite une démo du système de gestion scolaire et de suivi des paiements de scolarité.">
               <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
-              Demander une démo sur WhatsApp
+              Demander une démo<span class="sr-only"> sur WhatsApp</span>
             </a>
+            </div>
           </article>
 
-          <!-- Cas 3 -->
-          <article class="card spot reveal flex flex-col p-5 sm:p-7" style="--d:180ms">
+          <!-- Cas 3 — visuel : assets/cas-caisse.webp -->
+          <article class="card spot reveal flex flex-col overflow-hidden" style="--d:180ms">
+            <div class="relative">
+              <img src="assets/cas-caisse.webp" width="960" height="537" loading="lazy" decoding="async" class="aspect-[16/9] w-full object-cover sm:aspect-[21/9] lg:aspect-[16/9]"
+                   alt="Téléphone affichant un tableau de caisse, à côté d'un tiroir-caisse et d'une imprimante de reçus">
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-surface to-transparent"></div>
+            </div>
+            <div class="flex flex-1 flex-col p-5 pt-4 sm:p-7 sm:pt-5">
             <div class="flex items-center gap-3">
-              <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><i data-lucide="store" class="h-5 w-5"></i></span>
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><svg class="h-5 w-5" aria-hidden="true"><use href="#l-store"/></svg></span>
               <span class="text-[.85rem] font-semibold text-zinc-400">Boutiques et points de vente</span>
             </div>
             <h3 class="mt-5 text-[1.3rem] font-bold leading-snug tracking-tight text-white">Suivi de caisse et de trésorerie pour points de vente</h3>
@@ -402,15 +429,16 @@
               </div>
             </dl>
             <ul class="mb-8 mt-6 space-y-2.5 text-[.93rem] font-medium text-zinc-300">
-              <li class="flex gap-2.5"><i data-lucide="layout-dashboard" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Tableau de bord de trésorerie</li>
-              <li class="flex gap-2.5"><i data-lucide="wifi-off" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Vente possible même sans réseau</li>
-              <li class="flex gap-2.5"><i data-lucide="smartphone" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Cash et Mobile Money séparés</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-layout-dashboard"/></svg>Tableau de bord de trésorerie</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-wifi-off"/></svg>Vente possible même sans réseau</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-smartphone"/></svg>Cash et Mobile Money séparés</li>
             </ul>
             <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
                data-wa="Bonjour, je souhaite une démo de l'outil de suivi de caisse et de trésorerie pour points de vente.">
               <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
-              Demander une démo sur WhatsApp
+              Demander une démo<span class="sr-only"> sur WhatsApp</span>
             </a>
+            </div>
           </article>
         </div>
       </div>
@@ -430,23 +458,23 @@
           <article class="card spot reveal relative overflow-hidden p-6 sm:p-9 lg:col-span-2 lg:row-span-2">
             <div class="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full" style="background:radial-gradient(closest-side, rgba(99,102,241,.28), transparent)" aria-hidden="true"></div>
             <div class="relative flex h-full flex-col">
-              <span class="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-600 text-white shadow-[inset_0_1px_0_rgba(255,255,255,.3)]"><i data-lucide="code-xml" class="h-6 w-6"></i></span>
+              <span class="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-600 text-white shadow-[inset_0_1px_0_rgba(255,255,255,.3)]"><svg class="h-6 w-6" aria-hidden="true"><use href="#l-code-xml"/></svg></span>
               <h3 class="mt-6 max-w-lg text-[1.6rem] font-extrabold leading-[1.15] tracking-[-0.025em] text-white sm:text-[2.1rem]">Développement SaaS et applications web</h3>
               <p class="mt-4 max-w-xl text-[1.02rem] leading-[1.65] text-zinc-400">Stock, finances, écoles, coopératives, automatisation : je conçois l'outil qui correspond à votre façon de travailler, pas l'inverse.</p>
 
               <div class="mt-8 grid gap-4 sm:grid-cols-3">
                 <div class="rounded-2xl border border-line bg-white/[.025] p-4">
-                  <i data-lucide="rocket" class="h-5 w-5 text-brand-400"></i>
+                  <svg class="h-5 w-5 text-brand-400" aria-hidden="true"><use href="#l-rocket"/></svg>
                   <p class="mt-3 text-[.98rem] font-bold text-zinc-100">MVP rapide</p>
                   <p class="mt-1.5 text-[.9rem] leading-[1.55] text-zinc-400">Une première version utilisable vite, que l'on améliore avec vos retours.</p>
                 </div>
                 <div class="rounded-2xl border border-line bg-white/[.025] p-4">
-                  <i data-lucide="pointer" class="h-5 w-5 text-brand-400"></i>
+                  <svg class="h-5 w-5 text-brand-400" aria-hidden="true"><use href="#l-pointer"/></svg>
                   <p class="mt-3 text-[.98rem] font-bold text-zinc-100">Interfaces intuitives</p>
                   <p class="mt-1.5 text-[.9rem] leading-[1.55] text-zinc-400">Prises en main par vos équipes terrain sans longue formation.</p>
                 </div>
                 <div class="rounded-2xl border border-line bg-white/[.025] p-4">
-                  <i data-lucide="shield-check" class="h-5 w-5 text-brand-400"></i>
+                  <svg class="h-5 w-5 text-brand-400" aria-hidden="true"><use href="#l-shield-check"/></svg>
                   <p class="mt-3 text-[.98rem] font-bold text-zinc-100">Sécurité des données</p>
                   <p class="mt-1.5 text-[.9rem] leading-[1.55] text-zinc-400">Accès par rôle, sauvegardes automatiques, données protégées.</p>
                 </div>
@@ -459,12 +487,12 @@
                   <li class="inline-flex items-center gap-2 rounded-full border border-line bg-white/[.03] px-3 py-1.5"><span class="h-2 w-2 rounded-full" style="background:#FF7900"></span>Orange Money</li>
                   <li class="inline-flex items-center gap-2 rounded-full border border-line bg-white/[.03] px-3 py-1.5"><span class="h-2 w-2 rounded-full" style="background:#FFCB05"></span>MTN MoMo</li>
                   <li class="inline-flex items-center gap-2 rounded-full border border-line bg-white/[.03] px-3 py-1.5"><span class="h-2 w-2 rounded-full" style="background:#2E7DE1"></span>Moov Money</li>
-                  <li class="inline-flex items-center gap-2 rounded-full border border-line bg-white/[.03] px-3 py-1.5"><i data-lucide="wifi-off" class="h-3.5 w-3.5 text-zinc-400"></i>Mode hors-ligne</li>
+                  <li class="inline-flex items-center gap-2 rounded-full border border-line bg-white/[.03] px-3 py-1.5"><svg class="h-3.5 w-3.5 text-zinc-400" aria-hidden="true"><use href="#l-wifi-off"/></svg>Mode hors-ligne</li>
                 </ul>
               </div>
 
               <div class="mt-9 lg:mt-auto lg:pt-9">
-                <a class="btn btn-wa w-full sm:w-auto sm:px-7" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+                <a class="btn btn-wa w-full px-4 sm:w-auto sm:px-7" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
                    data-wa="Bonjour, j'ai besoin d'un logiciel sur mesure pour mon activité. Voici ce que je voudrais digitaliser : ">
                   <svg class="h-5 w-5" aria-hidden="true"><use href="#i-wa"/></svg>
                   Parler de mon logiciel
@@ -478,15 +506,15 @@
             <div class="flex items-center gap-3 text-[.86rem] font-bold text-gold" aria-hidden="true">
               <span>Chine</span>
               <span class="route h-4 flex-1"></span>
-              <i data-lucide="ship" class="h-[18px] w-[18px]"></i>
+              <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#l-ship"/></svg>
               <span class="route h-4 flex-1"></span>
               <span>Abidjan</span>
             </div>
             <h3 class="mt-5 text-[1.22rem] font-bold leading-snug tracking-tight text-white">Sourcing et importation Chine – Côte d'Ivoire</h3>
             <ul class="mb-7 mt-4 space-y-2.5 text-[.95rem] leading-[1.5] text-zinc-400">
-              <li class="flex gap-2.5"><i data-lucide="factory" class="mt-0.5 h-[18px] w-[18px] flex-none text-gold"></i>Recherche d'usines fiables</li>
-              <li class="flex gap-2.5"><i data-lucide="search-check" class="mt-0.5 h-[18px] w-[18px] flex-none text-gold"></i>Contrôle qualité avant expédition</li>
-              <li class="flex gap-2.5"><i data-lucide="package-check" class="mt-0.5 h-[18px] w-[18px] flex-none text-gold"></i>Logistique sécurisée jusqu'à la livraison</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-gold" aria-hidden="true"><use href="#l-factory"/></svg>Recherche d'usines fiables</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-gold" aria-hidden="true"><use href="#l-search-check"/></svg>Contrôle qualité avant expédition</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-gold" aria-hidden="true"><use href="#l-package-check"/></svg>Logistique sécurisée jusqu'à la livraison</li>
             </ul>
             <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
                data-wa="Bonjour, je souhaite importer un produit depuis la Chine vers la Côte d'Ivoire. Voici ce que je recherche : ">
@@ -497,12 +525,12 @@
 
           <!-- Carte 3 : Marketing & Formation -->
           <article class="card spot reveal flex flex-col p-5 sm:p-7" style="--d:180ms">
-            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><i data-lucide="megaphone" class="h-5 w-5"></i></span>
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><svg class="h-5 w-5" aria-hidden="true"><use href="#l-megaphone"/></svg></span>
             <h3 class="mt-5 text-[1.22rem] font-bold leading-snug tracking-tight text-white">Marketing digital et formation</h3>
             <ul class="mb-7 mt-4 space-y-2.5 text-[.95rem] leading-[1.5] text-zinc-400">
-              <li class="flex gap-2.5"><i data-lucide="target" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Acquisition sur TikTok et Meta</li>
-              <li class="flex gap-2.5"><i data-lucide="filter" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Tunnels de vente</li>
-              <li class="flex gap-2.5"><i data-lucide="sparkles" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Formation pratique aux outils digitaux et à l'IA</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-target"/></svg>Acquisition sur TikTok et Meta</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-filter"/></svg>Tunnels de vente</li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-sparkles"/></svg>Formation pratique aux outils digitaux et à l'IA</li>
             </ul>
             <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
                data-wa="Bonjour, je suis intéressé(e) par votre accompagnement en marketing digital / formation. Mon objectif : ">
@@ -547,12 +575,12 @@
 
     <!-- ══════════════════════════ 6. CTA FINAL ══════════════════════════ -->
     <section id="contact" class="px-5 pb-20 sm:px-8 lg:pb-28">
-      <div class="reveal relative mx-auto max-w-6xl overflow-hidden rounded-[30px] border border-white/10 bg-surface px-6 py-14 text-center sm:px-12 sm:py-20">
+      <div class="reveal relative mx-auto max-w-6xl overflow-hidden rounded-[30px] border border-white/10 bg-surface px-5 py-14 text-center sm:px-12 sm:py-20">
         <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background:radial-gradient(70% 90% at 50% 0%, rgba(99,102,241,.30), transparent 65%), radial-gradient(50% 60% at 50% 110%, rgba(16,185,129,.16), transparent 70%)"></div>
         <div class="relative mx-auto max-w-2xl">
           <h2 class="text-[2rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-white sm:text-[3rem]">Parlons de votre projet aujourd'hui.</h2>
           <p class="mx-auto mt-5 max-w-xl text-[1.06rem] leading-[1.65] text-zinc-300">Décrivez votre besoin en quelques lignes sur WhatsApp. Je reviens vers vous avec une première piste concrète.</p>
-          <a class="btn btn-wa mt-9 w-full text-[1.08rem] sm:w-auto sm:px-10" style="min-height:64px;border-radius:18px" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+          <a class="btn btn-wa mt-9 w-full px-4 text-[length:clamp(.94rem,4.7vw,1.08rem)] sm:w-auto sm:px-10" style="min-height:64px;border-radius:18px" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
              data-wa="Bonjour, je souhaite démarrer un projet avec vous. En quelques mots : ">
             <svg class="h-6 w-6" aria-hidden="true"><use href="#i-wa"/></svg>
             Discuter sur WhatsApp
@@ -581,7 +609,7 @@
                class="grid h-12 w-12 place-items-center rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 transition hover:bg-emerald-500/20"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-wa"/></svg></a></li>
       </ul>
     </div>
-    <p class="border-t border-line px-5 py-5 text-center text-[.82rem] text-zinc-500">© <span data-year>2026</span> Votre Nom. Tous droits réservés.</p>
+    <p class="border-t border-line px-5 py-5 text-center text-[.82rem] text-zinc-400">© <span data-year>2026</span> Votre Nom. Tous droits réservés.</p>
   </footer>
 
   <!-- Bouton WhatsApp flottant : apparaît sur mobile après le hero -->
@@ -591,9 +619,6 @@
      data-wa="Bonjour, je viens de voir votre site et j'aimerais échanger avec vous sur un projet.">
     <svg class="h-7 w-7" aria-hidden="true"><use href="#i-wa"/></svg>
   </a>
-
-  <!-- Icônes Lucide -->
-  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
 
   <script>
     /* ════════════════════════════════════════════════════════════════
@@ -607,8 +632,6 @@
     document.querySelectorAll('[data-wa]').forEach(function (a) {
       a.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(a.dataset.wa);
     });
-
-    if (window.lucide) lucide.createIcons({ attrs: { 'stroke-width': 2, 'aria-hidden': 'true' } });
 
     document.querySelectorAll('[data-year]').forEach(function (n) { n.textContent = new Date().getFullYear(); });
 
@@ -697,7 +720,8 @@
 
       // La séquence démarre quand la démo est réellement à l'écran
       // (sur mobile elle se trouve sous les boutons du hero)
-      var box = demo.getBoundingClientRect();
+      var feed = demo.querySelector('[data-feed]');
+      var box = feed.getBoundingClientRect();
       var visible = Math.min(box.bottom, window.innerHeight) - Math.max(box.top, 0);
       if (visible >= box.height * 0.45) {
         setTimeout(play, 350);            // déjà visible au chargement (desktop)
@@ -705,7 +729,7 @@
         var seen = new IntersectionObserver(function (entries) {
           if (entries[0].isIntersecting) { seen.disconnect(); play(); }
         }, { threshold: 0.45 });
-        seen.observe(demo);
+        seen.observe(feed);
       } else {
         play();
       }

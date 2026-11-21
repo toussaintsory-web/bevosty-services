@@ -1,0 +1,5 @@
+/* Point d'entrée de Tailwind : sert uniquement à générer styles.css
+   (voir la commande dans outils/tailwind.config.js). */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
