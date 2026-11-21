@@ -8,16 +8,24 @@
        REMPLACER ICI — NOM / MARQUE (titre de l'onglet + aperçu du lien
        quand vous le partagez sur WhatsApp, TikTok, Instagram)
        ════════════════════════════════════════════════════════════════ -->
-  <title>Votre Nom — Logiciels SaaS sur mesure en Côte d'Ivoire</title>
+  <title>Bevosty Services — Logiciels SaaS sur mesure en Côte d'Ivoire</title>
   <meta name="description" content="Logiciels SaaS sur mesure pour entreprises et coopératives en Côte d'Ivoire : gestion, Mobile Money, hors-ligne. Sourcing Chine et marketing digital.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_CI">
-  <meta property="og:title" content="Votre Nom — Logiciels SaaS sur mesure en Côte d'Ivoire">
+  <meta property="og:title" content="Bevosty Services — Logiciels SaaS sur mesure en Côte d'Ivoire">
   <meta property="og:description" content="Gestion, paiements Mobile Money, mode hors-ligne : des outils pensés pour le terrain ivoirien. Discutons de votre projet sur WhatsApp.">
-  <!-- REMPLACER ICI — image d'aperçu du lien (1200×630 px), URL absolue une fois le site en ligne -->
-  <!-- <meta property="og:image" content="https://votre-domaine.com/apercu.jpg"> -->
+  <!-- Adresse publique du site : à changer ici si vous prenez un nom de domaine -->
+  <link rel="canonical" href="https://toussaintsory-web.github.io/bevosty-services/">
+  <meta property="og:url" content="https://toussaintsory-web.github.io/bevosty-services/">
+  <meta property="og:site_name" content="Bevosty Services">
+  <!-- Image d'aperçu du lien (1200×630 px) : fichier assets/apercu.jpg. L'adresse doit rester absolue. -->
+  <meta property="og:image" content="https://toussaintsory-web.github.io/bevosty-services/assets/apercu.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bevosty Services : logiciels SaaS sur mesure, avec un tableau de bord d'encaissements Mobile Money">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#09090B">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%236366F1'/%3E%3Cpath d='M9 21V11l7 6 7-6v10' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="icon" href="marque/icone-bevosty.svg" type="image/svg+xml">
 
   <!-- Polices -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -186,14 +194,10 @@
   <header id="top" class="sticky top-0 z-50 border-b border-transparent transition-colors duration-300" data-header>
     <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
 
-      <!-- REMPLACER ICI — NOM / LOGO.
-           Changez « Votre Nom » ci-dessous. Pour un logo image, remplacez le <span> carré par :
-           <img src="logo.png" alt="" class="h-9 w-9 rounded-xl"> -->
-      <a href="#top" class="flex h-11 min-w-0 items-center gap-2.5" aria-label="Retour en haut de page">
-        <span class="grid h-9 w-9 flex-none place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-600 shadow-[inset_0_1px_0_rgba(255,255,255,.3)]">
-          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17V7l7 6 7-6v10"/></svg>
-        </span>
-        <span class="truncate text-[1.02rem] font-bold tracking-tight">Votre Nom</span>
+      <!-- LOGO : fichiers dans le dossier marque/ (version fond sombre ici).
+           Règles d'usage : marque/charte.html -->
+      <a href="#top" class="flex h-11 min-w-0 items-center" aria-label="Bevosty Services, retour en haut de page">
+        <img src="marque/logo-bevosty-sombre.svg" alt="" width="165" height="37" class="h-8 w-auto max-w-full object-contain object-left sm:h-9">
       </a>
 
       <div class="flex flex-none items-center gap-3">
@@ -201,10 +205,12 @@
           <span class="pulse"></span>Disponible pour de nouveaux projets
         </span>
         <a class="inline-flex h-11 items-center gap-2 rounded-xl bg-zinc-100 px-4 text-[.92rem] font-bold text-zinc-950 transition hover:bg-white active:scale-[.97]"
-           href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+           href="https://wa.me/2250708167605" target="_blank" rel="noopener"
            data-wa="Bonjour, je viens de voir votre site et j'aimerais échanger avec vous sur un projet.">
           <svg class="h-[18px] w-[18px] text-emerald-600" aria-hidden="true"><use href="#i-wa"/></svg>
-          Me contacter
+          <!-- Libellé selon la place disponible : complet dès 400 px, court en dessous, icône seule sous 350 px -->
+          <span aria-hidden="true" class="hidden min-[350px]:inline min-[400px]:hidden">Contact</span>
+          <span class="sr-only min-[400px]:not-sr-only">Me contacter</span>
         </a>
       </div>
     </div>
@@ -234,7 +240,7 @@
           </p>
 
           <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <a class="btn btn-wa sm:px-7" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+            <a class="btn btn-wa sm:px-7" href="https://wa.me/2250708167605" target="_blank" rel="noopener"
                data-wa="Bonjour, je souhaite lancer un projet SaaS sur mesure. Voici mon activité et mon besoin : ">
               <svg class="h-5 w-5" aria-hidden="true"><use href="#i-wa"/></svg>
               Lancer mon projet SaaS
@@ -361,7 +367,7 @@
               <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-wifi-off"/></svg>Saisie terrain hors-ligne</li>
               <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-smartphone"/></svg>Remboursements par Mobile Money</li>
             </ul>
-            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250708167605" target="_blank" rel="noopener"
                data-wa="Bonjour, je souhaite une démo de la plateforme de gestion et de recouvrement pour coopératives agricoles.">
               <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
               Demander une démo<span class="sr-only"> sur WhatsApp</span>
@@ -397,7 +403,7 @@
               <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-wifi-off"/></svg>Fonctionne sans connexion</li>
               <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-smartphone"/></svg>Wave, Orange Money, MTN, Moov</li>
             </ul>
-            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250708167605" target="_blank" rel="noopener"
                data-wa="Bonjour, je souhaite une démo du système de gestion scolaire et de suivi des paiements de scolarité.">
               <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
               Demander une démo<span class="sr-only"> sur WhatsApp</span>
@@ -433,7 +439,7 @@
               <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-wifi-off"/></svg>Vente possible même sans réseau</li>
               <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-smartphone"/></svg>Cash et Mobile Money séparés</li>
             </ul>
-            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250708167605" target="_blank" rel="noopener"
                data-wa="Bonjour, je souhaite une démo de l'outil de suivi de caisse et de trésorerie pour points de vente.">
               <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
               Demander une démo<span class="sr-only"> sur WhatsApp</span>
@@ -492,7 +498,7 @@
               </div>
 
               <div class="mt-9 lg:mt-auto lg:pt-9">
-                <a class="btn btn-wa w-full px-4 sm:w-auto sm:px-7" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+                <a class="btn btn-wa w-full px-4 sm:w-auto sm:px-7" href="https://wa.me/2250708167605" target="_blank" rel="noopener"
                    data-wa="Bonjour, j'ai besoin d'un logiciel sur mesure pour mon activité. Voici ce que je voudrais digitaliser : ">
                   <svg class="h-5 w-5" aria-hidden="true"><use href="#i-wa"/></svg>
                   Parler de mon logiciel
@@ -516,7 +522,7 @@
               <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-gold" aria-hidden="true"><use href="#l-search-check"/></svg>Contrôle qualité avant expédition</li>
               <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-gold" aria-hidden="true"><use href="#l-package-check"/></svg>Logistique sécurisée jusqu'à la livraison</li>
             </ul>
-            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250708167605" target="_blank" rel="noopener"
                data-wa="Bonjour, je souhaite importer un produit depuis la Chine vers la Côte d'Ivoire. Voici ce que je recherche : ">
               <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
               Sourcer un produit
@@ -532,7 +538,7 @@
               <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-filter"/></svg>Tunnels de vente</li>
               <li class="flex gap-2.5"><svg class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400" aria-hidden="true"><use href="#l-sparkles"/></svg>Formation pratique aux outils digitaux et à l'IA</li>
             </ul>
-            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250708167605" target="_blank" rel="noopener"
                data-wa="Bonjour, je suis intéressé(e) par votre accompagnement en marketing digital / formation. Mon objectif : ">
               <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
               Développer ma visibilité
@@ -580,7 +586,7 @@
         <div class="relative mx-auto max-w-2xl">
           <h2 class="text-[2rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-white sm:text-[3rem]">Parlons de votre projet aujourd'hui.</h2>
           <p class="mx-auto mt-5 max-w-xl text-[1.06rem] leading-[1.65] text-zinc-300">Décrivez votre besoin en quelques lignes sur WhatsApp. Je reviens vers vous avec une première piste concrète.</p>
-          <a class="btn btn-wa mt-9 w-full px-4 text-[length:clamp(.94rem,4.7vw,1.08rem)] sm:w-auto sm:px-10" style="min-height:64px;border-radius:18px" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+          <a class="btn btn-wa mt-9 w-full px-4 text-[length:clamp(.94rem,4.7vw,1.08rem)] sm:w-auto sm:px-10" style="min-height:64px;border-radius:18px" href="https://wa.me/2250708167605" target="_blank" rel="noopener"
              data-wa="Bonjour, je souhaite démarrer un projet avec vous. En quelques mots : ">
             <svg class="h-6 w-6" aria-hidden="true"><use href="#i-wa"/></svg>
             Discuter sur WhatsApp
@@ -595,27 +601,31 @@
   <footer class="border-t border-line">
     <div class="mx-auto flex max-w-6xl flex-col items-center gap-7 px-5 py-10 text-center sm:px-8 md:flex-row md:justify-between md:text-left">
       <div>
-        <!-- REMPLACER ICI — NOM / MARQUE -->
-        <p class="text-[1rem] font-bold tracking-tight text-zinc-100">Votre Nom</p>
-        <p class="mt-1.5 text-[.9rem] text-zinc-400">Logiciels SaaS sur mesure, sourcing Chine et marketing digital. Abidjan, Côte d'Ivoire.</p>
+        <img src="marque/logo-bevosty-sombre.svg" alt="Bevosty Services" width="165" height="37" loading="lazy" class="mx-auto h-8 w-auto md:mx-0">
+        <p class="mt-3 text-[.9rem] text-zinc-400">Logiciels SaaS sur mesure, sourcing Chine et marketing digital. Abidjan, Côte d'Ivoire.</p>
       </div>
 
-      <!-- REMPLACER ICI — LIENS RÉSEAUX SOCIAUX (remplacez chaque href) -->
+      <!-- REMPLACER ICI — LIENS RÉSEAUX SOCIAUX.
+           TikTok, Instagram et LinkedIn sont désactivés tant que les vrais liens ne sont pas connus.
+           Pour les réactiver : remplacez chaque href par votre lien, puis supprimez les deux lignes
+           « RÉSEAUX DÉSACTIVÉS » qui les entourent. -->
       <ul class="flex items-center gap-3">
+        <!-- RÉSEAUX DÉSACTIVÉS (début)
         <li><a href="https://www.tiktok.com/@votrecompte" target="_blank" rel="noopener" aria-label="TikTok" class="grid h-12 w-12 place-items-center rounded-xl border border-line bg-white/[.03] text-zinc-300 transition hover:border-white/20 hover:bg-white/[.08] hover:text-white"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
         <li><a href="https://www.instagram.com/votrecompte" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-12 w-12 place-items-center rounded-xl border border-line bg-white/[.03] text-zinc-300 transition hover:border-white/20 hover:bg-white/[.08] hover:text-white"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
         <li><a href="https://www.linkedin.com/in/votrecompte" target="_blank" rel="noopener" aria-label="LinkedIn" class="grid h-12 w-12 place-items-center rounded-xl border border-line bg-white/[.03] text-zinc-300 transition hover:border-white/20 hover:bg-white/[.08] hover:text-white"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
-        <li><a href="https://wa.me/2250700000000" target="_blank" rel="noopener" aria-label="WhatsApp" data-wa="Bonjour, je viens de voir votre site et j'aimerais échanger avec vous."
+        RÉSEAUX DÉSACTIVÉS (fin) -->
+        <li><a href="https://wa.me/2250708167605" target="_blank" rel="noopener" aria-label="WhatsApp" data-wa="Bonjour, je viens de voir votre site et j'aimerais échanger avec vous."
                class="grid h-12 w-12 place-items-center rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 transition hover:bg-emerald-500/20"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-wa"/></svg></a></li>
       </ul>
     </div>
-    <p class="border-t border-line px-5 py-5 text-center text-[.82rem] text-zinc-400">© <span data-year>2026</span> Votre Nom. Tous droits réservés.</p>
+    <p class="border-t border-line px-5 py-5 text-center text-[.82rem] text-zinc-400">© <span data-year>2026</span> Bevosty Services. Tous droits réservés.</p>
   </footer>
 
   <!-- Bouton WhatsApp flottant : apparaît sur mobile après le hero -->
   <a class="fab fixed bottom-4 right-4 z-40 grid h-14 w-14 place-items-center rounded-full bg-go-500 text-[#03130C] shadow-[0_12px_30px_-8px_rgba(16,185,129,.8)] md:hidden"
      style="bottom:calc(1rem + env(safe-area-inset-bottom))"
-     href="https://wa.me/2250700000000" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp" data-fab
+     href="https://wa.me/2250708167605" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp" data-fab
      data-wa="Bonjour, je viens de voir votre site et j'aimerais échanger avec vous sur un projet.">
     <svg class="h-7 w-7" aria-hidden="true"><use href="#i-wa"/></svg>
   </a>
@@ -626,7 +636,7 @@
        Format international, sans « + », sans espaces. Ex : 2250712345678
        Tous les boutons de la page utilisent ce numéro automatiquement.
        ════════════════════════════════════════════════════════════════ */
-    const WHATSAPP = '2250700000000';
+    const WHATSAPP = '2250708167605';
 
     // Liens WhatsApp pré-remplis : le message vient de l'attribut data-wa de chaque bouton
     document.querySelectorAll('[data-wa]').forEach(function (a) {

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="BEVOSTY SERVICES">
+  <title>BEVOSTY SERVICES</title>
+  <!-- Icône carrée : favicon, photo de profil, icône d'application -->
+  <defs>
+    <linearGradient id="bevosty-degrade-icone" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#bevosty-degrade-icone)"/>
+  <path fill="#FFFFFF" transform="translate(16.6 12.2) scale(1.1)" d="M2 0H8.8V36H2A2 2 0 0 1 0 34V2A2 2 0 0 1 2 0ZM12 0H18A8 8 0 0 1 26 8V13.35L12 16.85ZM12 20.15L30 15.65V27A9 9 0 0 1 21 36H12Z"/>
+</svg>
