@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "vitrine",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "C:\\Users\\HP\\AppData\\Local\\Temp\\claude\\112006043dd7cecb\\f704c2df-9f12-4136-8bbc-2f21d7de47ae\\scratchpad\\serve.js",
+        "C:\\Users\\HP\\Ma vitrine"
+      ],
+      "port": 4173
+    }
+  ]
+}

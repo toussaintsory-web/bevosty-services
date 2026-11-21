@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- ════════════════════════════════════════════════════════════════
+       REMPLACER ICI — NOM / MARQUE (titre de l'onglet + aperçu du lien
+       quand vous le partagez sur WhatsApp, TikTok, Instagram)
+       ════════════════════════════════════════════════════════════════ -->
+  <title>Votre Nom — Logiciels SaaS sur mesure en Côte d'Ivoire</title>
+  <meta name="description" content="Je conçois des logiciels SaaS sur mesure pour les entreprises, coopératives et entrepreneurs en Côte d'Ivoire : gestion, paiements Mobile Money, mode hors-ligne. Sourcing Chine et marketing digital en complément.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_CI">
+  <meta property="og:title" content="Votre Nom — Logiciels SaaS sur mesure en Côte d'Ivoire">
+  <meta property="og:description" content="Gestion, paiements Mobile Money, mode hors-ligne : des outils pensés pour le terrain ivoirien. Discutons de votre projet sur WhatsApp.">
+  <!-- REMPLACER ICI — image d'aperçu du lien (1200×630 px), URL absolue une fois le site en ligne -->
+  <!-- <meta property="og:image" content="https://votre-domaine.com/apercu.jpg"> -->
+  <meta name="theme-color" content="#09090B">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%236366F1'/%3E%3Cpath d='M9 21V11l7 6 7-6v10' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Évite le flash blanc pendant le chargement + active les animations seulement si JS est dispo -->
+  <style>html{background:#09090B}</style>
+  <script>document.documentElement.classList.add('js')</script>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'] },
+          colors: {
+            ink: '#09090B',
+            surface: '#121216',
+            raised: '#17171C',
+            line: 'rgba(255,255,255,0.08)',
+            brand: { 400: '#60A5FA', 500: '#3B82F6', 600: '#6366F1' },
+            go: { 400: '#34D399', 500: '#10B981' },
+            gold: '#E3BD76'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root { --line: rgba(255,255,255,.08); --surface: #121216; }
+    * { -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
+    body {
+      background: #09090B; color: #F4F4F5; overflow-x: clip;
+      font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    }
+    section[id] { scroll-margin-top: 84px; }
+    ::selection { background: rgba(99,102,241,.45); }
+    :focus-visible { outline: 2px solid #818CF8; outline-offset: 3px; border-radius: 10px; }
+    .tnum { font-variant-numeric: tabular-nums; }
+
+    /* ── Cartes ─────────────────────────────────────────────── */
+    .card {
+      position: relative; background: var(--surface); border: 1px solid var(--line);
+      border-radius: 22px; isolation: isolate;
+      background-image: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0) 42%);
+      transition: border-color .25s ease, transform .25s ease;
+    }
+    /* Halo qui suit le curseur (desktop uniquement) */
+    @media (hover: hover) {
+      .card.spot::after {
+        content: ""; position: absolute; inset: -1px; border-radius: inherit; z-index: -1;
+        background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(99,102,241,.16), transparent 62%);
+        opacity: 0; transition: opacity .3s ease; pointer-events: none;
+      }
+      .card.spot:hover { border-color: rgba(129,140,248,.32); }
+      .card.spot:hover::after { opacity: 1; }
+    }
+
+    /* ── Boutons ────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+      min-height: 54px; padding: 0 1.4rem; border-radius: 15px;
+      font-weight: 700; font-size: 1rem; line-height: 1.2; text-align: center;
+      transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease, border-color .18s ease;
+      touch-action: manipulation;
+    }
+    .btn:active { transform: scale(.975); }
+    .btn-wa {
+      background: #10B981; color: #03130C;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 10px 32px -10px rgba(16,185,129,.7);
+    }
+    .btn-ghost { background: rgba(255,255,255,.04); color: #F4F4F5; border: 1px solid rgba(255,255,255,.12); }
+    .btn-soft { background: rgba(16,185,129,.09); color: #6EE7B7; border: 1px solid rgba(16,185,129,.28); min-height: 52px; font-size: .9rem; padding: .5rem .8rem; gap: .5rem; text-wrap: balance; }
+    @media (hover: hover) {
+      .btn-wa:hover { background: #34D399; transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 16px 38px -10px rgba(16,185,129,.8); }
+      .btn-ghost:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.22); }
+      .btn-soft:hover { background: rgba(16,185,129,.16); border-color: rgba(16,185,129,.5); }
+    }
+
+    /* ── Fond du hero : grille + lueur ──────────────────────── */
+    .hero-bg {
+      position: absolute; inset: 0; pointer-events: none; overflow: hidden;
+      background:
+        radial-gradient(60% 46% at 78% 18%, rgba(99,102,241,.20), transparent 70%),
+        radial-gradient(46% 38% at 8% 4%, rgba(59,130,246,.13), transparent 70%);
+    }
+    .hero-bg::before {
+      content: ""; position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 56px 56px;
+      -webkit-mask-image: radial-gradient(75% 60% at 50% 22%, #000 20%, transparent 78%);
+              mask-image: radial-gradient(75% 60% at 50% 22%, #000 20%, transparent 78%);
+    }
+
+    /* ── Badge de disponibilité ─────────────────────────────── */
+    .pulse { position: relative; width: 8px; height: 8px; border-radius: 99px; background: #10B981; flex: none; }
+    .pulse::after {
+      content: ""; position: absolute; inset: 0; border-radius: inherit; background: #10B981;
+      animation: ping 1.9s cubic-bezier(0,0,.2,1) infinite;
+    }
+    @keyframes ping { 0% { transform: scale(1); opacity: .75; } 80%, 100% { transform: scale(3.2); opacity: 0; } }
+
+    /* ── Démo du hero : les paiements arrivent ──────────────── */
+    .pay { transition: opacity .5s ease, transform .5s cubic-bezier(.2,.8,.2,1), background-color 1.2s ease; }
+    .js .pay.is-new { opacity: 0; transform: translateY(-10px); }
+    .pay.flash { background-color: rgba(16,185,129,.10); }
+    .bar { transform-origin: bottom; transition: transform .9s cubic-bezier(.2,.8,.2,1); }
+    .js .demo:not(.live) .bar { transform: scaleY(.08); }
+
+    /* ── Apparition au scroll ───────────────────────────────── */
+    .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); transition-delay: var(--d, 0ms); }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    /* ── Trajet Chine → Côte d'Ivoire ───────────────────────── */
+    .route { background-image: linear-gradient(90deg, rgba(227,189,118,.75) 50%, transparent 0); background-size: 12px 2px; background-repeat: repeat-x; background-position: 0 50%; animation: route 1.1s linear infinite; }
+    @keyframes route { to { background-position: 12px 50%; } }
+
+    /* ── Bouton WhatsApp flottant (mobile) ──────────────────── */
+    .fab { opacity: 0; transform: translateY(18px) scale(.92); pointer-events: none; transition: opacity .3s ease, transform .3s ease; }
+    .fab.show { opacity: 1; transform: none; pointer-events: auto; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+      .js .reveal, .js .pay.is-new { opacity: 1; transform: none; }
+      .js .demo:not(.live) .bar { transform: none; }
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+
+  <!-- Icônes de marque réutilisées dans la page -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/></g><circle cx="17.4" cy="6.6" r="1.25" fill="currentColor"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+  </svg>
+
+  <!-- ══════════════════════════ 1. HEADER ══════════════════════════ -->
+  <header id="top" class="sticky top-0 z-50 border-b border-transparent transition-colors duration-300" data-header>
+    <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
+
+      <!-- REMPLACER ICI — NOM / LOGO.
+           Changez « Votre Nom » ci-dessous. Pour un logo image, remplacez le <span> carré par :
+           <img src="logo.png" alt="" class="h-9 w-9 rounded-xl"> -->
+      <a href="#top" class="flex h-11 min-w-0 items-center gap-2.5" aria-label="Retour en haut de page">
+        <span class="grid h-9 w-9 flex-none place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-600 shadow-[inset_0_1px_0_rgba(255,255,255,.3)]">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17V7l7 6 7-6v10"/></svg>
+        </span>
+        <span class="truncate text-[1.02rem] font-bold tracking-tight">Votre Nom</span>
+      </a>
+
+      <div class="flex flex-none items-center gap-3">
+        <span class="hidden items-center gap-2.5 rounded-full border border-line bg-white/[.03] py-2 pl-3 pr-3.5 text-[.82rem] font-medium text-zinc-300 md:inline-flex">
+          <span class="pulse"></span>Disponible pour nouveaux projets
+        </span>
+        <a class="inline-flex h-11 items-center gap-2 rounded-xl bg-zinc-100 px-4 text-[.92rem] font-bold text-zinc-950 transition hover:bg-white active:scale-[.97]"
+           href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+           data-wa="Bonjour, je viens de voir votre site et j'aimerais échanger avec vous sur un projet.">
+          <svg class="h-[18px] w-[18px] text-emerald-600" aria-hidden="true"><use href="#i-wa"/></svg>
+          Me contacter
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ══════════════════════════ 2. HERO ══════════════════════════ -->
+    <section class="relative -mt-16 pt-16">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-16 pt-9 sm:px-8 sm:pt-14 lg:grid-cols-[1.08fr_.92fr] lg:gap-14 lg:pb-24 lg:pt-20">
+
+        <div class="min-w-0">
+          <!-- Badge visible sur mobile (sur desktop il est dans le header) -->
+          <p class="mb-6 inline-flex items-center gap-2.5 rounded-full border border-line bg-white/[.03] py-2 pl-3 pr-3.5 text-[.82rem] font-medium text-zinc-300 md:hidden">
+            <span class="pulse"></span>Disponible pour nouveaux projets
+          </p>
+
+          <p class="text-[.98rem] font-semibold text-brand-400 sm:text-[1.05rem]">Architecte de Solutions Digitales &amp; Business</p>
+
+          <h1 class="mt-4 text-[2.3rem] font-extrabold leading-[1.06] tracking-[-0.035em] text-white min-[400px]:text-[2.6rem] sm:text-[3.4rem] lg:text-[3.3rem] xl:text-[3.6rem]">
+            Je transforme vos idées et vos opérations en logiciels SaaS rentables.
+          </h1>
+
+          <p class="mt-6 max-w-[34rem] text-[1.06rem] leading-[1.65] text-zinc-400 sm:text-[1.14rem]">
+            J'aide les entreprises, coopératives et entrepreneurs de Côte d'Ivoire à automatiser leur gestion, à sourcer leurs produits en Chine et à accélérer leur croissance digitale.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a class="btn btn-wa sm:px-7" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+               data-wa="Bonjour, je souhaite lancer un projet SaaS sur mesure. Voici mon activité et mon besoin : ">
+              <svg class="h-5 w-5" aria-hidden="true"><use href="#i-wa"/></svg>
+              Lancer mon projet SaaS
+            </a>
+            <a class="btn btn-ghost" href="#expertises">
+              Découvrir mes expertises
+              <i data-lucide="arrow-down" class="h-[18px] w-[18px] text-zinc-400"></i>
+            </a>
+          </div>
+
+          <!-- Réassurance -->
+          <ul class="mt-10 grid gap-x-6 gap-y-4 border-t border-line pt-7 sm:grid-cols-3">
+            <li class="flex items-center gap-3 sm:block">
+              <i data-lucide="ruler" class="h-5 w-5 flex-none text-brand-400 sm:mb-2.5"></i>
+              <span class="text-[.95rem] font-semibold leading-snug text-zinc-200">Solutions 100&nbsp;% sur mesure</span>
+            </li>
+            <li class="flex items-center gap-3 sm:block">
+              <i data-lucide="smartphone-nfc" class="h-5 w-5 flex-none text-brand-400 sm:mb-2.5"></i>
+              <span class="text-[.95rem] font-semibold leading-snug text-zinc-200">Intégration Mobile Money native</span>
+            </li>
+            <li class="flex items-center gap-3 sm:block">
+              <i data-lucide="handshake" class="h-5 w-5 flex-none text-brand-400 sm:mb-2.5"></i>
+              <span class="text-[.95rem] font-semibold leading-snug text-zinc-200">Accompagnement de A à Z</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Démo : un tableau de bord où les paiements Mobile Money arrivent.
+             (Peut être remplacé par un visuel Higgsfield : supprimez ce bloc
+             et mettez <img src="hero.webp" alt="…" class="rounded-3xl"> ) -->
+        <div class="demo relative mx-auto w-full min-w-0 max-w-[30rem] lg:max-w-none" data-demo aria-label="Exemple de tableau de bord : encaissements Mobile Money d'une coopérative (données de démonstration)" role="img">
+          <div class="card rounded-[26px] p-4 shadow-[0_40px_90px_-40px_rgba(99,102,241,.55)] sm:p-5">
+
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2.5">
+                <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-600/15 text-brand-400"><i data-lucide="layout-dashboard" class="h-4 w-4"></i></span>
+                <span class="text-[.9rem] font-semibold text-zinc-200">Tableau de bord</span>
+              </div>
+              <span class="inline-flex flex-none items-center gap-1.5 text-[.78rem] font-semibold text-go-400"><span class="pulse"></span>En direct</span>
+            </div>
+
+            <div class="mt-5 flex items-end justify-between gap-4">
+              <div>
+                <p class="text-[.8rem] font-medium text-zinc-400">Encaissé aujourd'hui</p>
+                <p class="tnum mt-1 text-[1.85rem] font-extrabold leading-none tracking-tight text-white sm:text-[2.1rem]">
+                  <span data-total>1 245 000</span> <span class="text-[.95rem] font-semibold text-zinc-400">FCFA</span>
+                </p>
+              </div>
+              <!-- Mini graphique -->
+              <div class="flex h-14 items-end gap-[5px]" aria-hidden="true">
+                <span class="bar w-2 rounded-sm bg-white/10" style="height:38%"></span>
+                <span class="bar w-2 rounded-sm bg-white/10" style="height:56%;transition-delay:60ms"></span>
+                <span class="bar w-2 rounded-sm bg-white/10" style="height:44%;transition-delay:120ms"></span>
+                <span class="bar w-2 rounded-sm bg-white/10" style="height:70%;transition-delay:180ms"></span>
+                <span class="bar w-2 rounded-sm bg-white/10" style="height:60%;transition-delay:240ms"></span>
+                <span class="bar w-2 rounded-sm bg-brand-500/60" style="height:82%;transition-delay:300ms"></span>
+                <span class="bar w-2 rounded-sm bg-gradient-to-t from-brand-500 to-brand-600" style="height:100%;transition-delay:360ms"></span>
+              </div>
+            </div>
+
+            <ul class="mt-5 space-y-1.5" data-feed>
+              <li class="pay is-new flex items-center gap-3 rounded-xl px-2.5 py-2.5" data-amount="85000">
+                <span class="h-2.5 w-2.5 flex-none rounded-full" style="background:#1DC8F2"></span>
+                <span class="min-w-0 flex-1">
+                  <span class="block truncate text-[.9rem] font-semibold text-zinc-100">Kouassi A.</span>
+                  <span class="block text-[.78rem] text-zinc-400">Wave, remboursement d'avance</span>
+                </span>
+                <span class="tnum text-[.92rem] font-bold text-go-400">+85 000</span>
+              </li>
+              <li class="pay is-new flex items-center gap-3 rounded-xl px-2.5 py-2.5" data-amount="120000">
+                <span class="h-2.5 w-2.5 flex-none rounded-full" style="background:#FF7900"></span>
+                <span class="min-w-0 flex-1">
+                  <span class="block truncate text-[.9rem] font-semibold text-zinc-100">Traoré M.</span>
+                  <span class="block text-[.78rem] text-zinc-400">Orange Money, cotisation</span>
+                </span>
+                <span class="tnum text-[.92rem] font-bold text-go-400">+120 000</span>
+              </li>
+              <li class="pay is-new flex items-center gap-3 rounded-xl px-2.5 py-2.5" data-amount="45500">
+                <span class="h-2.5 w-2.5 flex-none rounded-full" style="background:#FFCB05"></span>
+                <span class="min-w-0 flex-1">
+                  <span class="block truncate text-[.9rem] font-semibold text-zinc-100">N'Guessan Y.</span>
+                  <span class="block text-[.78rem] text-zinc-400">MTN MoMo, achat d'intrants</span>
+                </span>
+                <span class="tnum text-[.92rem] font-bold text-go-400">+45 500</span>
+              </li>
+            </ul>
+
+            <div class="mt-3 flex flex-wrap items-center justify-between gap-x-3 gap-y-2 border-t border-line pt-3.5">
+              <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-300/20 bg-amber-300/[.07] px-2.5 py-1 text-[.74rem] font-semibold text-amber-200">
+                <i data-lucide="wifi-off" class="h-3 w-3"></i>3 saisies hors-ligne à synchroniser
+              </span>
+              <span class="text-[.74rem] text-zinc-500">Données de démonstration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ 3. CAS D'USAGE & RÉALISATIONS SAAS ══════════════════ -->
+    <section id="realisations" class="border-t border-line">
+      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
+        <div class="reveal max-w-2xl">
+          <h2 class="text-[1.9rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-white sm:text-[2.6rem]">Cas d'usage &amp; réalisations SaaS</h2>
+          <p class="mt-4 text-[1.05rem] leading-[1.65] text-zinc-400">Trois outils concrets, pensés pour le terrain ivoirien : ils fonctionnent sans connexion et encaissent par Mobile Money.</p>
+        </div>
+
+        <div class="mt-12 grid gap-5 lg:grid-cols-3">
+
+          <!-- Cas 1 -->
+          <article class="card spot reveal flex flex-col p-5 sm:p-7">
+            <div class="flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><i data-lucide="sprout" class="h-5 w-5"></i></span>
+              <span class="text-[.85rem] font-semibold text-zinc-400">Agriculture et coopératives</span>
+            </div>
+            <h3 class="mt-5 text-[1.3rem] font-bold leading-snug tracking-tight text-white">Plateforme de gestion et de recouvrement pour coopératives</h3>
+            <dl class="mt-5 space-y-4 text-[.97rem] leading-[1.6]">
+              <div>
+                <dt class="font-semibold text-zinc-200">Le problème</dt>
+                <dd class="mt-1 text-zinc-400">Des avances aux planteurs notées dans un cahier, des livraisons mal tracées et un recouvrement incertain en fin de campagne.</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-zinc-200">La solution</dt>
+                <dd class="mt-1 text-zinc-400">Chaque producteur, chaque livraison et chaque avance suivis au même endroit, même en zone sans réseau.</dd>
+              </div>
+            </dl>
+            <ul class="mb-8 mt-6 space-y-2.5 text-[.93rem] font-medium text-zinc-300">
+              <li class="flex gap-2.5"><i data-lucide="layout-dashboard" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Tableau de bord par campagne</li>
+              <li class="flex gap-2.5"><i data-lucide="wifi-off" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Saisie terrain hors-ligne</li>
+              <li class="flex gap-2.5"><i data-lucide="smartphone" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Remboursements par Mobile Money</li>
+            </ul>
+            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+               data-wa="Bonjour, je souhaite une démo de la plateforme de gestion et de recouvrement pour coopératives agricoles.">
+              <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
+              Demander une démo sur WhatsApp
+            </a>
+          </article>
+
+          <!-- Cas 2 -->
+          <article class="card spot reveal flex flex-col p-5 sm:p-7" style="--d:90ms">
+            <div class="flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><i data-lucide="graduation-cap" class="h-5 w-5"></i></span>
+              <span class="text-[.85rem] font-semibold text-zinc-400">Écoles et centres de formation</span>
+            </div>
+            <h3 class="mt-5 text-[1.3rem] font-bold leading-snug tracking-tight text-white">Gestion scolaire et suivi des paiements de scolarité</h3>
+            <dl class="mt-5 space-y-4 text-[.97rem] leading-[1.6]">
+              <div>
+                <dt class="font-semibold text-zinc-200">Le problème</dt>
+                <dd class="mt-1 text-zinc-400">Des relances faites à la main, des reçus papier qui se perdent et aucune vue claire des impayés par classe.</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-zinc-200">La solution</dt>
+                <dd class="mt-1 text-zinc-400">Inscriptions, échéanciers et reçus automatisés. Les parents paient depuis leur téléphone et reçoivent leur reçu.</dd>
+              </div>
+            </dl>
+            <ul class="mb-8 mt-6 space-y-2.5 text-[.93rem] font-medium text-zinc-300">
+              <li class="flex gap-2.5"><i data-lucide="layout-dashboard" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Tableau de bord des impayés</li>
+              <li class="flex gap-2.5"><i data-lucide="wifi-off" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Fonctionne sans connexion</li>
+              <li class="flex gap-2.5"><i data-lucide="smartphone" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Wave, Orange Money, MTN, Moov</li>
+            </ul>
+            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+               data-wa="Bonjour, je souhaite une démo du système de gestion scolaire et de suivi des paiements de scolarité.">
+              <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
+              Demander une démo sur WhatsApp
+            </a>
+          </article>
+
+          <!-- Cas 3 -->
+          <article class="card spot reveal flex flex-col p-5 sm:p-7" style="--d:180ms">
+            <div class="flex items-center gap-3">
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><i data-lucide="store" class="h-5 w-5"></i></span>
+              <span class="text-[.85rem] font-semibold text-zinc-400">Boutiques et points de vente</span>
+            </div>
+            <h3 class="mt-5 text-[1.3rem] font-bold leading-snug tracking-tight text-white">Suivi de caisse et de trésorerie pour points de vente</h3>
+            <dl class="mt-5 space-y-4 text-[.97rem] leading-[1.6]">
+              <div>
+                <dt class="font-semibold text-zinc-200">Le problème</dt>
+                <dd class="mt-1 text-zinc-400">Des écarts de caisse inexpliqués, des ventes Mobile Money mélangées au cash et aucun chiffre fiable en fin de journée.</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-zinc-200">La solution</dt>
+                <dd class="mt-1 text-zinc-400">Chaque vente enregistrée en deux gestes, une clôture de caisse automatique et une vue d'ensemble de toutes vos boutiques.</dd>
+              </div>
+            </dl>
+            <ul class="mb-8 mt-6 space-y-2.5 text-[.93rem] font-medium text-zinc-300">
+              <li class="flex gap-2.5"><i data-lucide="layout-dashboard" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Tableau de bord de trésorerie</li>
+              <li class="flex gap-2.5"><i data-lucide="wifi-off" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Vente possible même sans réseau</li>
+              <li class="flex gap-2.5"><i data-lucide="smartphone" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Cash et Mobile Money séparés</li>
+            </ul>
+            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+               data-wa="Bonjour, je souhaite une démo de l'outil de suivi de caisse et de trésorerie pour points de vente.">
+              <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
+              Demander une démo sur WhatsApp
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ 4. ÉCOSYSTÈME DE COMPÉTENCES (BENTO) ══════════════════ -->
+    <section id="expertises" class="border-t border-line">
+      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
+        <div class="reveal max-w-2xl">
+          <h2 class="text-[1.9rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-white sm:text-[2.6rem]">Un écosystème de compétences</h2>
+          <p class="mt-4 text-[1.05rem] leading-[1.65] text-zinc-400">Le logiciel au centre, avec deux expertises autour pour vous approvisionner et vous faire connaître.</p>
+        </div>
+
+        <div class="mt-12 grid gap-5 lg:grid-cols-3 lg:grid-rows-2">
+
+          <!-- Grande carte : SaaS -->
+          <article class="card spot reveal relative overflow-hidden p-6 sm:p-9 lg:col-span-2 lg:row-span-2">
+            <div class="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full" style="background:radial-gradient(closest-side, rgba(99,102,241,.28), transparent)" aria-hidden="true"></div>
+            <div class="relative flex h-full flex-col">
+              <span class="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-600 text-white shadow-[inset_0_1px_0_rgba(255,255,255,.3)]"><i data-lucide="code-xml" class="h-6 w-6"></i></span>
+              <h3 class="mt-6 max-w-lg text-[1.6rem] font-extrabold leading-[1.15] tracking-[-0.025em] text-white sm:text-[2.1rem]">Développement SaaS et applications web</h3>
+              <p class="mt-4 max-w-xl text-[1.02rem] leading-[1.65] text-zinc-400">Stock, finances, écoles, coopératives, automatisation : je conçois l'outil qui correspond à votre façon de travailler, pas l'inverse.</p>
+
+              <div class="mt-8 grid gap-4 sm:grid-cols-3">
+                <div class="rounded-2xl border border-line bg-white/[.025] p-4">
+                  <i data-lucide="rocket" class="h-5 w-5 text-brand-400"></i>
+                  <p class="mt-3 text-[.98rem] font-bold text-zinc-100">MVP rapide</p>
+                  <p class="mt-1.5 text-[.9rem] leading-[1.55] text-zinc-400">Une première version utilisable vite, que l'on améliore avec vos retours.</p>
+                </div>
+                <div class="rounded-2xl border border-line bg-white/[.025] p-4">
+                  <i data-lucide="pointer" class="h-5 w-5 text-brand-400"></i>
+                  <p class="mt-3 text-[.98rem] font-bold text-zinc-100">Interfaces intuitives</p>
+                  <p class="mt-1.5 text-[.9rem] leading-[1.55] text-zinc-400">Prises en main par vos équipes terrain sans longue formation.</p>
+                </div>
+                <div class="rounded-2xl border border-line bg-white/[.025] p-4">
+                  <i data-lucide="shield-check" class="h-5 w-5 text-brand-400"></i>
+                  <p class="mt-3 text-[.98rem] font-bold text-zinc-100">Sécurité des données</p>
+                  <p class="mt-1.5 text-[.9rem] leading-[1.55] text-zinc-400">Accès par rôle, sauvegardes automatiques, données protégées.</p>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <p class="text-[.88rem] font-semibold text-zinc-300">Paiements intégrés dès la conception</p>
+                <ul class="mt-3 flex flex-wrap gap-2 text-[.86rem] font-semibold text-zinc-200">
+                  <li class="inline-flex items-center gap-2 rounded-full border border-line bg-white/[.03] px-3 py-1.5"><span class="h-2 w-2 rounded-full" style="background:#1DC8F2"></span>Wave</li>
+                  <li class="inline-flex items-center gap-2 rounded-full border border-line bg-white/[.03] px-3 py-1.5"><span class="h-2 w-2 rounded-full" style="background:#FF7900"></span>Orange Money</li>
+                  <li class="inline-flex items-center gap-2 rounded-full border border-line bg-white/[.03] px-3 py-1.5"><span class="h-2 w-2 rounded-full" style="background:#FFCB05"></span>MTN MoMo</li>
+                  <li class="inline-flex items-center gap-2 rounded-full border border-line bg-white/[.03] px-3 py-1.5"><span class="h-2 w-2 rounded-full" style="background:#2E7DE1"></span>Moov Money</li>
+                  <li class="inline-flex items-center gap-2 rounded-full border border-line bg-white/[.03] px-3 py-1.5"><i data-lucide="wifi-off" class="h-3.5 w-3.5 text-zinc-400"></i>Mode hors-ligne</li>
+                </ul>
+              </div>
+
+              <div class="mt-9 lg:mt-auto lg:pt-9">
+                <a class="btn btn-wa w-full sm:w-auto sm:px-7" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+                   data-wa="Bonjour, j'ai besoin d'un logiciel sur mesure pour mon activité. Voici ce que je voudrais digitaliser : ">
+                  <svg class="h-5 w-5" aria-hidden="true"><use href="#i-wa"/></svg>
+                  Parler de mon logiciel
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte 2 : Sourcing -->
+          <article class="card spot reveal flex flex-col p-5 sm:p-7" style="--d:90ms">
+            <div class="flex items-center gap-3 text-[.86rem] font-bold text-gold" aria-hidden="true">
+              <span>Chine</span>
+              <span class="route h-4 flex-1"></span>
+              <i data-lucide="ship" class="h-[18px] w-[18px]"></i>
+              <span class="route h-4 flex-1"></span>
+              <span>Abidjan</span>
+            </div>
+            <h3 class="mt-5 text-[1.22rem] font-bold leading-snug tracking-tight text-white">Sourcing et importation Chine – Côte d'Ivoire</h3>
+            <ul class="mb-7 mt-4 space-y-2.5 text-[.95rem] leading-[1.5] text-zinc-400">
+              <li class="flex gap-2.5"><i data-lucide="factory" class="mt-0.5 h-[18px] w-[18px] flex-none text-gold"></i>Recherche d'usines fiables</li>
+              <li class="flex gap-2.5"><i data-lucide="search-check" class="mt-0.5 h-[18px] w-[18px] flex-none text-gold"></i>Contrôle qualité avant expédition</li>
+              <li class="flex gap-2.5"><i data-lucide="package-check" class="mt-0.5 h-[18px] w-[18px] flex-none text-gold"></i>Logistique sécurisée jusqu'à la livraison</li>
+            </ul>
+            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+               data-wa="Bonjour, je souhaite importer un produit depuis la Chine vers la Côte d'Ivoire. Voici ce que je recherche : ">
+              <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
+              Sourcer un produit
+            </a>
+          </article>
+
+          <!-- Carte 3 : Marketing & Formation -->
+          <article class="card spot reveal flex flex-col p-5 sm:p-7" style="--d:180ms">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand-600/15 text-brand-400"><i data-lucide="megaphone" class="h-5 w-5"></i></span>
+            <h3 class="mt-5 text-[1.22rem] font-bold leading-snug tracking-tight text-white">Marketing digital et formation</h3>
+            <ul class="mb-7 mt-4 space-y-2.5 text-[.95rem] leading-[1.5] text-zinc-400">
+              <li class="flex gap-2.5"><i data-lucide="target" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Acquisition sur TikTok et Meta</li>
+              <li class="flex gap-2.5"><i data-lucide="filter" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Tunnels de vente</li>
+              <li class="flex gap-2.5"><i data-lucide="sparkles" class="mt-0.5 h-[18px] w-[18px] flex-none text-brand-400"></i>Formation pratique aux outils digitaux et à l'IA</li>
+            </ul>
+            <a class="btn btn-soft mt-auto w-full" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+               data-wa="Bonjour, je suis intéressé(e) par votre accompagnement en marketing digital / formation. Mon objectif : ">
+              <svg class="h-[18px] w-[18px]" aria-hidden="true"><use href="#i-wa"/></svg>
+              Développer ma visibilité
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ 5. MÉTHODE DE TRAVAIL ══════════════════════ -->
+    <section id="methode" class="border-t border-line">
+      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
+        <div class="reveal max-w-2xl">
+          <h2 class="text-[1.9rem] font-extrabold leading-[1.12] tracking-[-0.03em] text-white sm:text-[2.6rem]">Une méthode en trois étapes</h2>
+          <p class="mt-4 text-[1.05rem] leading-[1.65] text-zinc-400">Vous savez à tout moment où en est votre projet et ce qui vient ensuite.</p>
+        </div>
+
+        <ol class="relative mt-12 grid gap-10 lg:grid-cols-3 lg:gap-8">
+          <!-- Ligne de liaison -->
+          <span class="absolute bottom-6 left-6 top-6 w-px bg-gradient-to-b from-brand-500/60 via-brand-600/30 to-transparent lg:bottom-auto lg:left-6 lg:right-[16%] lg:top-6 lg:h-px lg:w-auto lg:bg-gradient-to-r" aria-hidden="true"></span>
+
+          <li class="reveal relative pl-[4.25rem] lg:pl-0">
+            <span class="absolute left-0 top-0 grid h-12 w-12 place-items-center rounded-2xl border border-brand-500/40 bg-ink text-[1.1rem] font-extrabold text-brand-400 lg:static">1</span>
+            <h3 class="text-[1.2rem] font-bold tracking-tight text-white lg:mt-6">Audit et cadrage</h3>
+            <p class="mt-2.5 text-[.98rem] leading-[1.65] text-zinc-400">Un échange sur WhatsApp ou en appel pour comprendre votre activité, vos blocages, et définir précisément ce qu'il faut construire.</p>
+          </li>
+          <li class="reveal relative pl-[4.25rem] lg:pl-0" style="--d:90ms">
+            <span class="absolute left-0 top-0 grid h-12 w-12 place-items-center rounded-2xl border border-brand-500/40 bg-ink text-[1.1rem] font-extrabold text-brand-400 lg:static">2</span>
+            <h3 class="text-[1.2rem] font-bold tracking-tight text-white lg:mt-6">Prototypage et développement rapide</h3>
+            <p class="mt-2.5 text-[.98rem] leading-[1.65] text-zinc-400">Vous voyez d'abord une maquette, puis des versions à tester. Vous validez chaque étape avant de passer à la suivante.</p>
+          </li>
+          <li class="reveal relative pl-[4.25rem] lg:pl-0" style="--d:180ms">
+            <span class="absolute left-0 top-0 grid h-12 w-12 place-items-center rounded-2xl border border-brand-500/40 bg-ink text-[1.1rem] font-extrabold text-brand-400 lg:static">3</span>
+            <h3 class="text-[1.2rem] font-bold tracking-tight text-white lg:mt-6">Déploiement, formation et suivi</h3>
+            <p class="mt-2.5 text-[.98rem] leading-[1.65] text-zinc-400">Mise en ligne, formation de vos équipes, puis un suivi après le lancement pour corriger et faire évoluer l'outil.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ 6. CTA FINAL ══════════════════════════ -->
+    <section id="contact" class="px-5 pb-20 sm:px-8 lg:pb-28">
+      <div class="reveal relative mx-auto max-w-6xl overflow-hidden rounded-[30px] border border-white/10 bg-surface px-6 py-14 text-center sm:px-12 sm:py-20">
+        <div class="pointer-events-none absolute inset-0" aria-hidden="true" style="background:radial-gradient(70% 90% at 50% 0%, rgba(99,102,241,.30), transparent 65%), radial-gradient(50% 60% at 50% 110%, rgba(16,185,129,.16), transparent 70%)"></div>
+        <div class="relative mx-auto max-w-2xl">
+          <h2 class="text-[2rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-white sm:text-[3rem]">Parlons de votre projet aujourd'hui.</h2>
+          <p class="mx-auto mt-5 max-w-xl text-[1.06rem] leading-[1.65] text-zinc-300">Décrivez votre besoin en quelques lignes sur WhatsApp. Je reviens vers vous avec une première piste concrète.</p>
+          <a class="btn btn-wa mt-9 w-full text-[1.08rem] sm:w-auto sm:px-10" style="min-height:64px;border-radius:18px" href="https://wa.me/2250700000000" target="_blank" rel="noopener"
+             data-wa="Bonjour, je souhaite démarrer un projet avec vous. En quelques mots : ">
+            <svg class="h-6 w-6" aria-hidden="true"><use href="#i-wa"/></svg>
+            Discuter sur WhatsApp
+          </a>
+          <p class="mt-5 text-[.9rem] text-zinc-400">Premier échange sans engagement</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+  <footer class="border-t border-line">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-7 px-5 py-10 text-center sm:px-8 md:flex-row md:justify-between md:text-left">
+      <div>
+        <!-- REMPLACER ICI — NOM / MARQUE -->
+        <p class="text-[1rem] font-bold tracking-tight text-zinc-100">Votre Nom</p>
+        <p class="mt-1.5 text-[.9rem] text-zinc-400">Logiciels SaaS sur mesure, sourcing Chine et marketing digital. Abidjan, Côte d'Ivoire.</p>
+      </div>
+
+      <!-- REMPLACER ICI — LIENS RÉSEAUX SOCIAUX (remplacez chaque href) -->
+      <ul class="flex items-center gap-3">
+        <li><a href="https://www.tiktok.com/@votrecompte" target="_blank" rel="noopener" aria-label="TikTok" class="grid h-12 w-12 place-items-center rounded-xl border border-line bg-white/[.03] text-zinc-300 transition hover:border-white/20 hover:bg-white/[.08] hover:text-white"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+        <li><a href="https://www.instagram.com/votrecompte" target="_blank" rel="noopener" aria-label="Instagram" class="grid h-12 w-12 place-items-center rounded-xl border border-line bg-white/[.03] text-zinc-300 transition hover:border-white/20 hover:bg-white/[.08] hover:text-white"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/votrecompte" target="_blank" rel="noopener" aria-label="LinkedIn" class="grid h-12 w-12 place-items-center rounded-xl border border-line bg-white/[.03] text-zinc-300 transition hover:border-white/20 hover:bg-white/[.08] hover:text-white"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+        <li><a href="https://wa.me/2250700000000" target="_blank" rel="noopener" aria-label="WhatsApp" data-wa="Bonjour, je viens de voir votre site et j'aimerais échanger avec vous."
+               class="grid h-12 w-12 place-items-center rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 transition hover:bg-emerald-500/20"><svg class="h-5 w-5" aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+      </ul>
+    </div>
+    <p class="border-t border-line px-5 py-5 text-center text-[.82rem] text-zinc-500">© <span data-year>2026</span> Votre Nom. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Bouton WhatsApp flottant : apparaît sur mobile après le hero -->
+  <a class="fab fixed bottom-4 right-4 z-40 grid h-14 w-14 place-items-center rounded-full bg-go-500 text-[#03130C] shadow-[0_12px_30px_-8px_rgba(16,185,129,.8)] md:hidden"
+     style="bottom:calc(1rem + env(safe-area-inset-bottom))"
+     href="https://wa.me/2250700000000" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp" data-fab
+     data-wa="Bonjour, je viens de voir votre site et j'aimerais échanger avec vous sur un projet.">
+    <svg class="h-7 w-7" aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+
+  <!-- Icônes Lucide -->
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+
+  <script>
+    /* ════════════════════════════════════════════════════════════════
+       REMPLACER ICI — VOTRE NUMÉRO WHATSAPP
+       Format international, sans « + », sans espaces. Ex : 2250712345678
+       Tous les boutons de la page utilisent ce numéro automatiquement.
+       ════════════════════════════════════════════════════════════════ */
+    const WHATSAPP = '2250700000000';
+
+    // Liens WhatsApp pré-remplis : le message vient de l'attribut data-wa de chaque bouton
+    document.querySelectorAll('[data-wa]').forEach(function (a) {
+      a.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(a.dataset.wa);
+    });
+
+    if (window.lucide) lucide.createIcons({ attrs: { 'stroke-width': 2, 'aria-hidden': 'true' } });
+
+    document.querySelectorAll('[data-year]').forEach(function (n) { n.textContent = new Date().getFullYear(); });
+
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Header : fond flouté une fois la page défilée + bouton flottant après le hero
+    var header = document.querySelector('[data-header]');
+    var fab = document.querySelector('[data-fab]');
+    var contact = document.getElementById('contact');
+    function onScroll() {
+      var y = window.scrollY;
+      var on = y > 12;
+      header.style.backgroundColor = on ? 'rgba(9,9,11,.78)' : '';
+      header.style.backdropFilter = header.style.webkitBackdropFilter = on ? 'saturate(160%) blur(14px)' : '';
+      header.style.borderColor = on ? 'rgba(255,255,255,.08)' : '';
+      // On masque le bouton flottant quand le grand bouton final est à l'écran
+      var nearEnd = contact.getBoundingClientRect().top < window.innerHeight * 0.8;
+      fab.classList.toggle('show', y > 620 && !nearEnd);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Apparition des blocs au scroll
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !reduced) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      reveals.forEach(function (el) { io.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    // Halo qui suit le curseur sur les cartes (souris uniquement)
+    if (window.matchMedia('(hover: hover)').matches) {
+      document.querySelectorAll('.card.spot').forEach(function (card) {
+        card.addEventListener('pointermove', function (e) {
+          var r = card.getBoundingClientRect();
+          card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+          card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        });
+      });
+    }
+
+    // Démo du hero : les paiements arrivent un à un et le total s'additionne
+    (function () {
+      var demo = document.querySelector('[data-demo]');
+      if (!demo) return;
+      var totalEl = demo.querySelector('[data-total]');
+      var rows = [].slice.call(demo.querySelectorAll('.pay'));
+      var total = 1245000;
+      var fmt = function (n) { return Math.round(n).toLocaleString('fr-FR').replace(/[  ]/g, ' '); };
+
+      if (reduced) {
+        rows.forEach(function (r) { r.classList.remove('is-new'); total += +r.dataset.amount; });
+        totalEl.textContent = fmt(total);
+        demo.classList.add('live');
+        return;
+      }
+
+      function countTo(target) {
+        var from = total, start = null;
+        total = target;
+        function step(t) {
+          if (!start) start = t;
+          var p = Math.min((t - start) / 700, 1);
+          totalEl.textContent = fmt(from + (target - from) * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      function play() {
+        demo.classList.add('live');
+        rows.forEach(function (row, i) {
+          setTimeout(function () {
+            row.classList.remove('is-new');
+            row.classList.add('flash');
+            countTo(total + (+row.dataset.amount));
+            setTimeout(function () { row.classList.remove('flash'); }, 1300);
+          }, 650 + i * 1100);
+        });
+      }
+
+      // La séquence démarre quand la démo est réellement à l'écran
+      // (sur mobile elle se trouve sous les boutons du hero)
+      var box = demo.getBoundingClientRect();
+      var visible = Math.min(box.bottom, window.innerHeight) - Math.max(box.top, 0);
+      if (visible >= box.height * 0.45) {
+        setTimeout(play, 350);            // déjà visible au chargement (desktop)
+      } else if ('IntersectionObserver' in window) {
+        var seen = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting) { seen.disconnect(); play(); }
+        }, { threshold: 0.45 });
+        seen.observe(demo);
+      } else {
+        play();
+      }
+    })();
+  </script>
+</body>
+</html>
